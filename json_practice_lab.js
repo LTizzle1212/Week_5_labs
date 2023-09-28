@@ -118,8 +118,8 @@ console.log(cats_and_owners)
 Source http://api.nobelprize.org/v1/prize.json?year=2017
 * */
 
-// TODO print the full name of the Literature Nobel laureate.
-// TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
+// TODO print the full name of the Literature Nobel laureate. DONE 
+// loop - TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
 // TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
 // TODO write code to print the total number of prize categories
 // TODO write code to count the total number of laureates from 2017. 
@@ -251,13 +251,48 @@ let nobel_prize_winners_2017 = {
   ]
 }
 
-let laureateLiterature = nobel_prize_winners_2017.prizes
-console.log(nobel_prize_winners_2017)
+let arrayOfPrizes = nobel_prize_winners_2017.prizes // loop over and/or access by index 
+//console.log(arrayOfPrizes)
 
-let prizeInfo = nobel_prize_winners_2017.laureateLiterature[0]
-console.log(prizeInfo)
+literatureObject = arrayOfPrizes[3]
+console.log(literatureObject)
+// objects - access by property
+// arrays - access by index
 
-let year = nobel_prize_winners_2017.year.year
-console.log(year)
+literatureLaureates = literatureObject.laureates
+console.log(literatureLaureates)
 
-// I need some guidance on this part as I tried to watch the videos but I am lost for the JSON section
+literatureLaureate = literatureLaureates[0]
+console.log(literatureLaureate)
+
+firstname = literatureLaureate.firstname
+console.log(firstname)
+
+lastName = literatureLaureate.surname
+console.log(lastName)
+
+//loop - TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed
+
+// printPhysicsLaureateIds(data) {
+//   let physicsCategory = data.prizes.find(category => category.category === "physics")
+//   for (physicsCategory) {
+//     physicsCategory.laureates.forEach(laureates)
+//       console.log('Physics Nobel Laureate ID: ${laureate.id')
+//     )
+//   }
+// }
+
+
+
+/// TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
+let arrayOfCategories = nobel_prize_winners_2017.prizes
+
+categoryObject = arrayOfCategories.category
+console.log(categoryObject)
+
+// categoryName = categoryObject.category
+// console.log(categoryName)
+
+
+// TODO write code to print the total number of prize categories
+// TODO write code to count the total number of laureates from 2017. 
