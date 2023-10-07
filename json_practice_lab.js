@@ -109,6 +109,8 @@ let catName = catOwnerObject.cat
 
 console.log(`${ownerName}'s cat is called ${catName}`)
 })
+let garyOldmanCat = cats_and_owners.find(ownerName === "Gary Oldman");
+console.log(garyOldmanCat.cat);
 
 cats_and_owners.push[{ name: "Taylor Swift", cat: "Meredith" }]
 console.log(cats_and_owners)
